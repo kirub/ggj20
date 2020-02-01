@@ -330,6 +330,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 169120850}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3926176276869231304, guid: ec25f95525c8e4943bda3a74f49f8f36,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3926176276869231304, guid: ec25f95525c8e4943bda3a74f49f8f36,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -3926176276869231304, guid: ec25f95525c8e4943bda3a74f49f8f36,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1101391778563849876, guid: ec25f95525c8e4943bda3a74f49f8f36,
         type: 3}
       propertyPath: m_Name
@@ -697,6 +716,8 @@ GameObject:
   - component: {fileID: 856674413}
   - component: {fileID: 856674415}
   - component: {fileID: 856674414}
+  - component: {fileID: 856674417}
+  - component: {fileID: 856674416}
   m_Layer: 0
   m_Name: Mr. Clerk
   m_TagString: AnimatedCharacter
@@ -788,6 +809,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &856674416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856674412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5217e0fcb8fff4c903a13b82d83646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIElement: {fileID: 1577111704}
+--- !u!65 &856674417
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856674412}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1502874, y: 3.14, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1031068121
 PrefabInstance:
   m_ObjectHideFlags: 0
