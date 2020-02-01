@@ -9,6 +9,12 @@ public class PlayerCharacterController : MovementComponent
 
     void Awake()
     {
+        InitPlayerCharacter();
+    }
+
+    protected void InitPlayerCharacter()
+    {
+        InitMovementComponent();
         Player = this;
     }
 

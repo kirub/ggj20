@@ -11,6 +11,11 @@ public class MovementComponent : MonoBehaviour
 
     void Awake()
     {
+        InitMovementComponent();
+    }
+
+    protected void InitMovementComponent()
+    {
         CharacterAnimator = GetComponentInChildren<Animator>();
     }
 
