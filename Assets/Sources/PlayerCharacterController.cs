@@ -9,10 +9,18 @@ public class PlayerCharacterController : MonoBehaviour
 
     private float Orientation { get; set; }
 
+    private Animator PlayerAnimator;
+    private Rigidbody2D RigidBody;
+
+    void Awake()
+    {
+        PlayerAnimator = GetComponent<Animator>();
+        RigidBody = gameObject.GetComponent<Rigidbody2D>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -30,6 +38,7 @@ public class PlayerCharacterController : MonoBehaviour
             Speed = -5.0f;
         }
 
+        PlayerAnimator.SetBool("Running", Speed > 0.0f || Speed < 0.0f);
         UpdatePosition();
     }
 
