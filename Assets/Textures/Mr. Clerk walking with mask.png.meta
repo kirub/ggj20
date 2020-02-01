@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: 60c7ff9df032cb94098423d82cbfad49
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8302696331957451731
+    second: Mr. Clerk walking with mask_0
+  - first:
+      213: 3891330411349699108
+    second: Mr. Clerk walking with mask_1
+  - first:
+      213: 302975313775808437
+    second: Mr. Clerk walking with mask_2
+  - first:
+      213: -8394395016740939381
+    second: Mr. Clerk walking with mask_3
+  - first:
+      213: -8119224371003550945
+    second: Mr. Clerk walking with mask_4
+  - first:
+      213: 5747315847358456616
+    second: Mr. Clerk walking with mask_5
+  - first:
+      213: -7305557716182005482
+    second: Mr. Clerk walking with mask_6
+  - first:
+      213: -8660958403588362554
+    second: Mr. Clerk walking with mask_7
+  - first:
+      213: -2918839913704226941
+    second: Mr. Clerk walking with mask_8
+  - first:
+      213: -2128829422438162395
+    second: Mr. Clerk walking with mask_9
+  - first:
+      213: -6624789448137566295
+    second: Mr. Clerk walking with mask_10
+  - first:
+      213: 4113790212348352289
+    second: Mr. Clerk walking with mask_11
+  - first:
+      213: -1584035066146670327
+    second: Mr. Clerk walking with mask_12
+  - first:
+      213: 6187895303591472553
+    second: Mr. Clerk walking with mask_13
+  - first:
+      213: -243197209585901736
+    second: Mr. Clerk walking with mask_14
+  - first:
+      213: -8250766980413652381
+    second: Mr. Clerk walking with mask_15
+  - first:
+      213: -8040215487071645612
+    second: Mr. Clerk walking with mask_0
+  - first:
+      213: 2862545158838251351
+    second: Mr. Clerk walking with mask_1
+  - first:
+      213: -1302395392162165591
+    second: Mr. Clerk walking with mask_2
+  - first:
+      213: 4645545262463342158
+    second: Mr. Clerk walking with mask_3
+  - first:
+      213: 4649490030325669023
+    second: Mr. Clerk walking with mask_4
+  - first:
+      213: -8626177172186005337
+    second: Mr. Clerk walking with mask_5
+  - first:
+      213: 7370030306150695557
+    second: Mr. Clerk walking with mask_6
+  - first:
+      213: -7563152125611231401
+    second: Mr. Clerk walking with mask_7
+  - first:
+      213: 3324115583705740802
+    second: Mr. Clerk walking with mask_8
+  - first:
+      213: 5439315001473283772
+    second: Mr. Clerk walking with mask_9
+  - first:
+      213: 7115908597593605667
+    second: Mr. Clerk walking with mask_10
+  - first:
+      213: -6409721650717314607
+    second: Mr. Clerk walking with mask_11
+  - first:
+      213: 8540218549596592330
+    second: Mr. Clerk walking with mask_12
+  - first:
+      213: -3722715306995500398
+    second: Mr. Clerk walking with mask_13
+  - first:
+      213: 8774996330037094938
+    second: Mr. Clerk walking with mask_14
+  - first:
+      213: -8546824506179138417
+    second: Mr. Clerk walking with mask_15
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_0
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 457
+        width: 216
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45010870d9a6b6090800000000000000
+      internalID: -8040215487071645612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 462
+        width: 217
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f6112d7adc9b720800000000000000
+      internalID: 2862545158838251351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_2
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 457
+        width: 207
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac811d8a46fcede0800000000000000
+      internalID: -1302395392162165591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_3
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 457
+        width: 206
+        height: 329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4650259dca487040800000000000000
+      internalID: 4645545262463342158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_4
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 456
+        width: 213
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c184c6c8e468040800000000000000
+      internalID: 4649490030325669023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_5
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 461
+        width: 215
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0054ab099a94880800000000000000
+      internalID: -8626177172186005337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_6
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 456
+        width: 205
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582c9fde38b974660800000000000000
+      internalID: 7370030306150695557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_7
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 457
+        width: 206
+        height: 329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757b3ba86394a0790800000000000000
+      internalID: -7563152125611231401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_8
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 71
+        width: 214
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206fe1fe281a12e20800000000000000
+      internalID: 3324115583705740802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_9
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 71
+        width: 217
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6b444dc245c7b40800000000000000
+      internalID: 5439315001473283772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_10
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 71
+        width: 206
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32607b5fa29c0c260800000000000000
+      internalID: 7115908597593605667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_11
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 71
+        width: 206
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d13ddb6e181c07a0800000000000000
+      internalID: -6409721650717314607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_12
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 71
+        width: 213
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac818e8d583f48670800000000000000
+      internalID: 8540218549596592330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_13
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 71
+        width: 215
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29abf9ee622465cc0800000000000000
+      internalID: -3722715306995500398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_14
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 71
+        width: 205
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1aa7359bac07c970800000000000000
+      internalID: 8774996330037094938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk walking with mask_15
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 71
+        width: 206
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8cc6970564936980800000000000000
+      internalID: -8546824506179138417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
