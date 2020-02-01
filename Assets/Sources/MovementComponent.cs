@@ -41,7 +41,7 @@ public class MovementComponent : MonoBehaviour
             CharacterAnimator.SetBool("Running", Direction > 0.0f || Direction < 0.0f);
         }
 
-        if (Direction == 0.0f)
+        if (Target.sqrMagnitude == 0.0f)
             return;
 
         transform.position = transform.position + Target * MovementSpeed * Time.deltaTime;
