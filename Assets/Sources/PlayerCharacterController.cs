@@ -32,6 +32,7 @@ public class PlayerCharacterController : MovementComponent
 
     void ToggleMask()
     {
+        CharacterAnimator.SetTrigger("ToggleMask");
         CharacterAnimator.SetBool("WearMask", !CharacterAnimator.GetBool("WearMask"));
     }
 }
