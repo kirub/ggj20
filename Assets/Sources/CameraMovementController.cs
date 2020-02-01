@@ -19,7 +19,6 @@ public class CameraMovementController : MonoBehaviour
         Vector3 targetPosition = target.transform.position;
         Vector3 cameraPosition = transform.position;
         cameraPosition.x = targetPosition.x + cameraOffset.x;
-        cameraPosition.y = targetPosition.y + cameraOffset.y;
         transform.position = cameraPosition;
     }
 }
