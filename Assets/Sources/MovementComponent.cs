@@ -36,13 +36,17 @@ public class MovementComponent : MonoBehaviour
     {
         Target.Normalize();
         float Direction = Vector3.Dot(Target, Vector3.right) > 0.0f ? 1.0f : -1.0f;
-        if (CharacterAnimator)
-        {
-            CharacterAnimator.SetBool("Running", Direction > 0.0f || Direction < 0.0f);
-        }
 
         if (Target.sqrMagnitude == 0.0f)
+        {
+            CharacterAnimator.SetBool("Running", false);
             return;
+        }
+
+        if (CharacterAnimator)
+        {
+            CharacterAnimator.SetBool("Running", true);
+        }
 
         transform.position = transform.position + Target * MovementSpeed * Time.deltaTime;
         

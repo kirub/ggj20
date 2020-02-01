@@ -12,6 +12,11 @@ public class AiComponent : MovementComponent
     private Vector3 InitialPosition;
     private float CooldownOnSpot = 0.0f;
 
+    Vector3 ValidatePositions(Vector3 Position)
+    {
+        return new Vector3(Position.x, InitialPosition.y, Position.z);
+    }
+
     // Start is called before the first frame update
     void Start()
     {       
@@ -34,7 +39,8 @@ public class AiComponent : MovementComponent
         }
         else
         {
-            if (Vector3.Distance(Target.Current, transform.position) < DistanceThreshold)
+            Vector3 TargetPos = ValidatePositions(Target.Current);
+            if (Vector3.Distance(TargetPos, transform.position) < DistanceThreshold)
             {
                 if (!Target.MoveNext())
                 {
@@ -44,7 +50,7 @@ public class AiComponent : MovementComponent
 
                 CooldownOnSpot = WaitingOnSpotIntervalInSeconds;
             }
-            Move(Target.Current - transform.position);
+            Move(TargetPos - transform.position);
         }
     }
 }
