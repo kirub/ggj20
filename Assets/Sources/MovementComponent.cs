@@ -5,9 +5,9 @@ using UnityEngine;
 public class MovementComponent : MonoBehaviour
 {
     protected Animator CharacterAnimator;
-
-    public float MovementSpeed { get; set; } = 5.0f;
-    public float RotationSpeed { get; set; } = 0.2f;
+    
+    public float MovementSpeed = 5.0f;
+    public float RotationSpeed = 0.2f;
 
     void Awake()
     {
@@ -26,8 +26,16 @@ public class MovementComponent : MonoBehaviour
         
     }
 
+
     public void Move(float Direction)
     {
+        Move(Vector3.right * Direction);
+    }
+
+    public void Move(Vector3 Target)
+    {
+        Target.Normalize();
+        float Direction = Vector3.Dot(Target, Vector3.right) > 0.0f ? 1.0f : -1.0f;
         if (CharacterAnimator)
         {
             CharacterAnimator.SetBool("Running", Direction > 0.0f || Direction < 0.0f);
@@ -36,7 +44,7 @@ public class MovementComponent : MonoBehaviour
         if (Direction == 0.0f)
             return;
 
-        transform.position = transform.position + Vector3.right * Direction * Time.deltaTime;
+        transform.position = transform.position + Target * MovementSpeed * Time.deltaTime;
         
         if (Direction > 0.0f && transform.eulerAngles.y > 0.1f )
         {
