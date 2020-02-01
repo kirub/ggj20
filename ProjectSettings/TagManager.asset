@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AnimatedCharacter
   - AI
+  - ContextualUI
   layers:
   - Default
   - TransparentFX
