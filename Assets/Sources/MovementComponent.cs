@@ -67,24 +67,34 @@ public class MovementComponent : MonoBehaviour
         CapAngles(Direction);
     }
 
-    void CapAngles(float Direction)
+    public void FaceRight()
+    {
+        Vector3 Reset = transform.eulerAngles;
+        Reset.y = 0.0f;
+        transform.eulerAngles = Reset;
+    }
+
+    public void FaceLeft()
+    {
+        Vector3 Reset = transform.eulerAngles;
+        Reset.y = 180.0f;
+        transform.eulerAngles = Reset;
+    }
+
+    public void CapAngles(float Direction)
     {
         if (Direction > 0.0f)
         {
             if (transform.eulerAngles.y > 180.0f)
             {
-                Vector3 Reset = transform.eulerAngles;
-                Reset.y = 0.0f;
-                transform.eulerAngles = Reset;
+                FaceRight();
             }
         }
         else
         {
             if (transform.eulerAngles.y > 180.0f)
             {
-                Vector3 Reset = transform.eulerAngles;
-                Reset.y = 180.0f;
-                transform.eulerAngles = Reset;
+                FaceLeft();
             }
         }
     }

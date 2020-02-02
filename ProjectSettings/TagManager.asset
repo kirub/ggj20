@@ -54,12 +54,15 @@ TagManager:
   - name: Player
     uniqueID: 2863652065
     locked: 0
-  - name: NearFg
-    uniqueID: 4091816735
-    locked: 0
   - name: NPC
     uniqueID: 3837984289
     locked: 0
+  - name: NearFg
+    uniqueID: 4091816735
+    locked: 0
   - name: FarFg
     uniqueID: 2939663617
+    locked: 0
+  - name: HUD
+    uniqueID: 1980264733
     locked: 0

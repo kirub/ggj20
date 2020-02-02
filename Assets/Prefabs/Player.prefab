@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1809760276788309503}
   - component: {fileID: 1809760276788309496}
   - component: {fileID: 1809760276788309497}
+  - component: {fileID: -1954541928661927841}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809760276788309500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.67, y: 1, z: -3}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -42.67, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1809760278253368704}
   - {fileID: 3994148887345738410}
@@ -49,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 4.5
   RotationSpeed: 0.02
+  reviveSprite: {fileID: 21300000, guid: bf0c1fc84aba00a49962631938ef7d17, type: 3}
+  hidingSprite: {fileID: 21300000, guid: 26b261023a9c89e40b7c2e324c61d6a7, type: 3}
 --- !u!54 &1809760276788309496
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -73,11 +76,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809760276788309500}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 3, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-1954541928661927841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809760276788309500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f166cfa553a621a459a40612623bc782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToRevive: 5
 --- !u!1 &1809760278253368705
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +105,6 @@ GameObject:
   - component: {fileID: 1809760278253368704}
   - component: {fileID: 1809760278253368706}
   - component: {fileID: 1809760278253368707}
-  - component: {fileID: 1809760278253368733}
   m_Layer: 0
   m_Name: Mr. Clerk
   m_TagString: AnimatedCharacter
@@ -106,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 1809760278253368705}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1809760276788309502}
   m_RootOrder: 0
@@ -147,9 +162,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1431315231
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayerID: 1834775793
+  m_SortingLayer: 2
+  m_SortingOrder: 100
   m_Sprite: {fileID: 3810917835907769120, guid: 8c262f2e25dcc354c9e74ecca4b1e051,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -181,19 +196,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1809760278253368733
+--- !u!114 &7045998354709950101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809760278253368705}
+  m_GameObject: {fileID: 4648464293638058296}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d5217e0fcb8fff4c903a13b82d83646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIElement: {fileID: 9059910969234404113}
 --- !u!1001 &8280812882928373821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -348,15 +362,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc9b155f2723ab4099a67b25b04fea2, type: 3}
---- !u!224 &3994148887345738410 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5009491738191930007, guid: adc9b155f2723ab4099a67b25b04fea2,
+--- !u!1 &4648464293638058296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3632701571077153029, guid: adc9b155f2723ab4099a67b25b04fea2,
     type: 3}
   m_PrefabInstance: {fileID: 8280812882928373821}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &9059910969234404113 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1103415409107608364, guid: adc9b155f2723ab4099a67b25b04fea2,
+--- !u!224 &3994148887345738410 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5009491738191930007, guid: adc9b155f2723ab4099a67b25b04fea2,
     type: 3}
   m_PrefabInstance: {fileID: 8280812882928373821}
   m_PrefabAsset: {fileID: 0}
