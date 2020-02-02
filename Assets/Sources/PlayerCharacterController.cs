@@ -10,6 +10,10 @@ public class PlayerCharacterController : MovementComponent
     public bool IsWearingMask { get; set; } = false;
 
     private UIPlayerComponent ContextualUI = null;
+    private SpriteRenderer SpriteRender = null;
+    private GameObject ContextualUIObject = null;
+    private int InitialSortingOrder = -1;
+    private float InitialZPosition = 0.0f;
 
     void Awake()
     {
@@ -21,6 +25,9 @@ public class PlayerCharacterController : MovementComponent
         InitMovementComponent();
         Player = this;
         ContextualUI = GetComponentInChildren<UIPlayerComponent>();
+        SpriteRender = GetComponentInChildren<SpriteRenderer>();
+        InitialSortingOrder = SpriteRender.sortingOrder;
+        InitialZPosition = transform.position.z;
     }
 
     // Start is called before the first frame update
@@ -53,7 +60,18 @@ public class PlayerCharacterController : MovementComponent
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            ToggleMask();
+            if (IsTriggering("ContextualUI"))
+            {
+                ToggleHide();
+            }
+            else if (IsTriggering("Corpse"))
+            {
+                ToggleHide();
+            }
+            else
+            {
+                ToggleMask();
+            }
         }
 
         if (IsTriggering("Revive"))
@@ -67,15 +85,44 @@ public class PlayerCharacterController : MovementComponent
 
         ContextualUI.IsEnabled = IsTriggering("ContextualUI");
 
-
         Move(IsMoving);
     }
+
+    void ResetHide()
+    {
+        IsSpottable = true;
+        SpriteRender.sortingOrder = InitialSortingOrder;
+        transform.position = new Vector3(transform.position.x, transform.position.y, InitialZPosition);
+    }
+
+    void ToggleHide()
+    {
+        if (SpriteRender.sortingOrder != InitialSortingOrder)
+        {
+            ResetHide();
+        }
+        else if(ContextualUIObject)
+        {
+            IsSpottable = false;
+            SpriteRenderer CollidingObjSprite = ContextualUIObject.GetComponent<SpriteRenderer>();
+            if (CollidingObjSprite)
+            {
+                SpriteRender.sortingOrder = CollidingObjSprite.sortingOrder - 1;
+                transform.position = new Vector3(transform.position.x, transform.position.y, ContextualUIObject.transform.position.z - 0.1f);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No Contextual Object!");
+        }
+    }
+
 
     void ToggleMask()
     {
         IsWearingMask = !IsWearingMask;
         CharacterAnimator.SetTrigger("ToggleMask");
-        IsSpottable = IsWearingMask;
+        IsSpottable = !IsWearingMask;
     }
 
     void OnTriggerEnter(Collider other)
@@ -83,6 +130,10 @@ public class PlayerCharacterController : MovementComponent
         if (other.attachedRigidbody)
         {
             TriggeredTags.Add(other.attachedRigidbody.gameObject.tag);
+            if(other.CompareTag("ContextualUI"))
+            {
+                ContextualUIObject = other.gameObject;
+            }
         }
 
         Debug.Log("TRIGGERED!!");
@@ -94,6 +145,11 @@ public class PlayerCharacterController : MovementComponent
         if (other.attachedRigidbody)
         {
             TriggeredTags.Remove(other.attachedRigidbody.gameObject.tag);
+            if(other.CompareTag("ContextualUI"))
+            {
+                ContextualUIObject = null;
+                ResetHide();
+            }
         }
         Debug.Log("TRIGXIT!!");
         // UIElement.GetComponent<Image>().enabled = false;
