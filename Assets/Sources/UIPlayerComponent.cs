@@ -7,7 +7,7 @@ public class UIPlayerComponent : MonoBehaviour
 {
     public GameObject UIElement;
 
-    bool IsEnabled = false;
+    public bool IsEnabled { get; set; } = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +17,7 @@ public class UIPlayerComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool WasEnabled = IsEnabled;
-        IsEnabled = PlayerCharacterController.Player.IsTriggering("ContextualUI");
-
-        if(WasEnabled != IsEnabled)
+        if(UIElement.GetComponent<Image>().enabled != IsEnabled)
         {
             UIElement.GetComponent<Image>().enabled = IsEnabled;
         }

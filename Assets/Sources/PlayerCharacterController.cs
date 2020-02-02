@@ -6,6 +6,10 @@ public class PlayerCharacterController : MovementComponent
 {
     HashSet<string> TriggeredTags = new HashSet<string>();
     public static PlayerCharacterController Player = null;
+    public bool IsSpottable { get; set; } = true;
+    public bool IsWearingMask { get; set; } = false;
+
+    private UIPlayerComponent ContextualUI = null;
 
     void Awake()
     {
@@ -16,6 +20,7 @@ public class PlayerCharacterController : MovementComponent
     {
         InitMovementComponent();
         Player = this;
+        ContextualUI = GetComponentInChildren<UIPlayerComponent>();
     }
 
     // Start is called before the first frame update
@@ -51,18 +56,24 @@ public class PlayerCharacterController : MovementComponent
             ToggleMask();
         }
 
+        ContextualUI.IsEnabled = IsTriggering("ContextualUI");
+
         Move(IsMoving);
     }
 
     void ToggleMask()
     {
+        IsWearingMask = !IsWearingMask;
         CharacterAnimator.SetTrigger("ToggleMask");
-        CharacterAnimator.SetBool("WearMask", !CharacterAnimator.GetBool("WearMask"));
+        IsSpottable = IsWearingMask;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        TriggeredTags.Add(other.attachedRigidbody.gameObject.tag);
+        if (other.attachedRigidbody)
+        {
+            TriggeredTags.Add(other.attachedRigidbody.gameObject.tag);
+        }
 
         Debug.Log("TRIGGERED!!");
         //UIElement.GetComponent<Image>().enabled = true;
@@ -70,7 +81,10 @@ public class PlayerCharacterController : MovementComponent
 
     private void OnTriggerExit(Collider other)
     {
-        TriggeredTags.Remove(other.attachedRigidbody.gameObject.tag);
+        if (other.attachedRigidbody)
+        {
+            TriggeredTags.Remove(other.attachedRigidbody.gameObject.tag);
+        }
         Debug.Log("TRIGXIT!!");
         // UIElement.GetComponent<Image>().enabled = false;
     }
