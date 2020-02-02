@@ -9,10 +9,15 @@ public class PlayerCharacterController : MovementComponent
     public static PlayerCharacterController Player = null;
     public bool IsSpottable { get; set; } = true;
     public bool IsWearingMask { get; set; } = false;
+    public float killDistance = 2.0f;
     public Sprite reviveSprite;
     public Sprite hidingSprite;
+    public Sprite killingSprite;
 
     private UIPlayerComponent ContextualUI = null;
+    private Image image = null;
+    private GameObject closestNPC;
+    private GameObject[] NPC;
 
     void Awake()
     {
@@ -24,11 +29,14 @@ public class PlayerCharacterController : MovementComponent
         InitMovementComponent();
         Player = this;
         ContextualUI = GetComponentInChildren<UIPlayerComponent>();
+        image = ContextualUI.GetComponentInChildren<Image>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        NPC = GameObject.FindGameObjectsWithTag("AI");
+        closestNPC = NPC[0];
     }
 
     public bool IsTriggering(string TagName)
@@ -39,11 +47,16 @@ public class PlayerCharacterController : MovementComponent
     // Update is called once per frame
     void Update()
     {
-        Rigidbody2D RB = GetComponent<Rigidbody2D>();
-        if (RB)
+        foreach (GameObject npc in NPC)
         {
-            //Debug.Log(RB.transform.position);
+            if (Vector3.Distance(npc.transform.position, transform.position) < Vector3.Distance(closestNPC.transform.position, transform.position))
+            {
+                closestNPC = npc;
+            }
         }
+
+        bool IsAtKillingDistance = Vector3.Distance(closestNPC.transform.position, transform.position) < killDistance && !IsTriggering("AI");
+
         float IsMoving = 0.0f;
         if( Input.GetKey( KeyCode.RightArrow) )
         {
@@ -54,27 +67,39 @@ public class PlayerCharacterController : MovementComponent
             IsMoving = -1.0f;
         }
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            ToggleMask();
-        }
-
+        // ContextualUI
         if (IsTriggering("Corpse"))
         {
             ContextualUI.IsEnabled = true;
-            Image image = ContextualUI.GetComponentInChildren<Image>();
             image.sprite = reviveSprite;
-            if (Input.GetKeyDown(KeyCode.Space))
+        }
+        else if(IsAtKillingDistance)
+        {
+            ContextualUI.IsEnabled = true;
+            image.sprite = killingSprite;
+        }
+        else
+        {
+            // Default Behavior
+            ContextualUI.IsEnabled = IsTriggering("ContextualUI");
+            image.sprite = hidingSprite;
+        }
+
+        // Actions
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            if (IsTriggering("Corpse"))
             {
                 GetComponent<ReviveComponent>().Revive();
             }
-        }
-
-        else
-        {
-            ContextualUI.IsEnabled = IsTriggering("ContextualUI");
-            Image image = ContextualUI.GetComponentInChildren<Image>();
-            image.sprite = hidingSprite;
+            else if (IsAtKillingDistance)
+            {
+                // Kill Someone
+            }
+            else
+            {
+                ToggleMask();
+            }
         }
 
         Move(IsMoving);
