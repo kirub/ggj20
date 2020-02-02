@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCharacterController : MovementComponent
 {
@@ -8,6 +9,8 @@ public class PlayerCharacterController : MovementComponent
     public static PlayerCharacterController Player = null;
     public bool IsSpottable { get; set; } = true;
     public bool IsWearingMask { get; set; } = false;
+    public Sprite reviveSprite;
+    public Sprite hidingSprite;
 
     private UIPlayerComponent ContextualUI = null;
     private SpriteRenderer SpriteRender = null;
@@ -64,26 +67,29 @@ public class PlayerCharacterController : MovementComponent
             {
                 ToggleHide();
             }
-            else if (IsTriggering("Corpse"))
-            {
-                ToggleHide();
-            }
             else
             {
                 ToggleMask();
             }
         }
 
-        if (IsTriggering("Revive"))
-        {   
-            // display UI for reviving
+        if (IsTriggering("Corpse"))
+        {
+            ContextualUI.IsEnabled = true;
+            Image image = ContextualUI.GetComponentInChildren<Image>();
+            image.sprite = reviveSprite;
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 GetComponent<ReviveComponent>().Revive();
             }
         }
 
-        ContextualUI.IsEnabled = IsTriggering("ContextualUI");
+        else
+        {
+            ContextualUI.IsEnabled = IsTriggering("ContextualUI");
+            Image image = ContextualUI.GetComponentInChildren<Image>();
+            image.sprite = hidingSprite;
+        }
 
         Move(IsMoving);
     }
