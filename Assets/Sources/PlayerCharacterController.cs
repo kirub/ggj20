@@ -56,7 +56,17 @@ public class PlayerCharacterController : MovementComponent
             ToggleMask();
         }
 
+        if (IsTriggering("Revive"))
+        {   
+            // display UI for reviving
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GetComponent<ReviveComponent>().Revive();
+            }
+        }
+
         ContextualUI.IsEnabled = IsTriggering("ContextualUI");
+
 
         Move(IsMoving);
     }
