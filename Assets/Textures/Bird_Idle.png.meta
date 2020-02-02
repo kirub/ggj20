@@ -1,0 +1,595 @@
+fileFormatVersion: 2
+guid: 00c24442a5df23a4fb9c45d7af3d7231
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -703989615678852387
+    second: Bird_Idle_0
+  - first:
+      213: -7894935422509066019
+    second: Bird_Idle_1
+  - first:
+      213: -3545465634567314838
+    second: Bird_Idle_2
+  - first:
+      213: 7539034814062067864
+    second: Bird_Idle_3
+  - first:
+      213: -4007274765730218218
+    second: Bird_Idle_4
+  - first:
+      213: 6873730373470978141
+    second: Bird_Idle_5
+  - first:
+      213: 3722569974215191669
+    second: Bird_Idle_6
+  - first:
+      213: 5206897778112803441
+    second: Bird_Idle_7
+  - first:
+      213: -4441916782494550917
+    second: Bird_Idle_8
+  - first:
+      213: -8794704947076446124
+    second: Bird_Idle_9
+  - first:
+      213: -5717215369950225675
+    second: Bird_Idle_10
+  - first:
+      213: -4749704498066456304
+    second: Bird_Idle_11
+  - first:
+      213: 3723412483802889967
+    second: Bird_Idle_12
+  - first:
+      213: 8143589637937421414
+    second: Bird_Idle_13
+  - first:
+      213: 3492450668543674099
+    second: Bird_Idle_14
+  - first:
+      213: 301910950548381135
+    second: Bird_Idle_15
+  - first:
+      213: 7346667341723227323
+    second: Bird_Idle_16
+  - first:
+      213: -2701646991488337162
+    second: Bird_Idle_17
+  - first:
+      213: -1067549722175435130
+    second: Bird_Idle_18
+  - first:
+      213: 5822849381252648735
+    second: Bird_Idle_19
+  - first:
+      213: -6269532790150755893
+    second: Bird_Idle_20
+  - first:
+      213: 4144031558023373372
+    second: Bird_Idle_21
+  - first:
+      213: 237774193049495972
+    second: Bird_Idle_22
+  - first:
+      213: -3190941065139315214
+    second: Bird_Idle_23
+  - first:
+      213: 5046593166576950082
+    second: Bird_Idle_24
+  - first:
+      213: -4179941487638409801
+    second: Bird_Idle_25
+  - first:
+      213: -1064097191196413524
+    second: Bird_Idle_26
+  - first:
+      213: -7365395912194077992
+    second: Bird_Idle_27
+  - first:
+      213: -5170344870762405302
+    second: Bird_Idle_28
+  - first:
+      213: -3157326100059008567
+    second: Bird_Idle_29
+  - first:
+      213: 2090087802882824695
+    second: Bird_Idle_30
+  - first:
+      213: 3356693110353685003
+    second: Bird_Idle_31
+  - first:
+      213: 3607361620936141847
+    second: Bird_Idle_32
+  - first:
+      213: 2785293771044770651
+    second: Bird_Idle_33
+  - first:
+      213: -127432341213958218
+    second: Bird_Idle_0
+  - first:
+      213: 2895149656672857221
+    second: Bird_Idle_1
+  - first:
+      213: -5543650109114975457
+    second: Bird_Idle_2
+  - first:
+      213: 1216901948181449749
+    second: Bird_Idle_3
+  - first:
+      213: 3423187671842411656
+    second: Bird_Idle_4
+  - first:
+      213: -2370736324774090768
+    second: Bird_Idle_5
+  - first:
+      213: 5848493764305696151
+    second: Bird_Idle_6
+  - first:
+      213: -2349327591755430067
+    second: Bird_Idle_7
+  - first:
+      213: -3590205527680475621
+    second: Bird_Idle_8
+  - first:
+      213: -6809577648795487637
+    second: Bird_Idle_9
+  - first:
+      213: 2084715566107886238
+    second: Bird_Idle_10
+  - first:
+      213: -2425721511902198972
+    second: Bird_Idle_11
+  - first:
+      213: 8976145113922706036
+    second: Bird_Idle_12
+  - first:
+      213: 7109968663241258867
+    second: Bird_Idle_13
+  - first:
+      213: -3084978238517091435
+    second: Bird_Idle_14
+  - first:
+      213: -4939655694442145016
+    second: Bird_Idle_15
+  - first:
+      213: -458248719933404452
+    second: Bird_Idle_16
+  - first:
+      213: 6898285135672212511
+    second: Bird_Idle_17
+  - first:
+      213: -1164887066968486268
+    second: Bird_Idle_18
+  - first:
+      213: -62008952858840013
+    second: Bird_Idle_19
+  - first:
+      213: 5265175187416866907
+    second: Bird_Idle_20
+  - first:
+      213: -487512589319545695
+    second: Bird_Idle_21
+  - first:
+      213: 6201316215670208375
+    second: Bird_Idle_22
+  - first:
+      213: 2516038164152417481
+    second: Bird_Idle_23
+  - first:
+      213: 3531662185891706343
+    second: Bird_Idle_24
+  - first:
+      213: 6001714741814991164
+    second: Bird_Idle_25
+  - first:
+      213: -5805660322837905043
+    second: Bird_Idle_26
+  - first:
+      213: -2262779373599080337
+    second: Bird_Idle_27
+  - first:
+      213: -890688349854394580
+    second: Bird_Idle_28
+  - first:
+      213: -1131794435730817104
+    second: Bird_Idle_29
+  - first:
+      213: -5281008103202586836
+    second: Bird_Idle_30
+  - first:
+      213: 4714172575888297074
+    second: Bird_Idle_31
+  - first:
+      213: -4970004415638064696
+    second: Bird_Idle_32
+  - first:
+      213: -2994904743027658734
+    second: Bird_Idle_33
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bird_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 180
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bfab09f5f44b3ef0800000000000000
+      internalID: -127432341213958218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 0
+        width: 180
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c64990643ad2820800000000000000
+      internalID: 2895149656672857221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 180
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b7527e89ff013b0800000000000000
+      internalID: -5543650109114975457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 0
+        width: 180
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c06dbdfdd43e010800000000000000
+      internalID: 1216901948181449749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 0
+        width: 180
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884d9abfc0b918f20800000000000000
+      internalID: 3423187671842411656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 0
+        width: 180
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7a9b19fd3791fd0800000000000000
+      internalID: -2370736324774090768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 0
+        width: 180
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795378c87160a2150800000000000000
+      internalID: 5848493764305696151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 0
+        width: 180
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47c468a003856fd0800000000000000
+      internalID: -2349327591755430067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 0
+        width: 180
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e16f328170d2ec0800000000000000
+      internalID: -3590205527680475621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 0
+        width: 180
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62fa1505358f71a0800000000000000
+      internalID: -6809577648795487637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 0
+        width: 180
+        height: 210
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92869713c56eec10800000000000000
+      internalID: 2084715566107886238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 0
+        width: 180
+        height: 209
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443cb0f032b165ed0800000000000000
+      internalID: -2425721511902198972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
