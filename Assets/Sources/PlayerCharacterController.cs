@@ -9,14 +9,19 @@ public class PlayerCharacterController : MovementComponent
     public static PlayerCharacterController Player = null;
     public bool IsSpottable { get; set; } = true;
     public bool IsWearingMask { get; set; } = false;
+    public float killDistance = 2.0f;
     public Sprite reviveSprite;
     public Sprite hidingSprite;
+    public Sprite killingSprite;
 
     private UIPlayerComponent ContextualUI = null;
     private SpriteRenderer SpriteRender = null;
     private GameObject ContextualUIObject = null;
     private int InitialSortingOrder = -1;
     private float InitialZPosition = 0.0f;
+    private Image image = null;
+    private GameObject closestNPC;
+    private GameObject[] NPC;
 
     void Awake()
     {
@@ -31,11 +36,14 @@ public class PlayerCharacterController : MovementComponent
         SpriteRender = GetComponentInChildren<SpriteRenderer>();
         InitialSortingOrder = SpriteRender.sortingOrder;
         InitialZPosition = transform.position.z;
+        image = ContextualUI.GetComponentInChildren<Image>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        NPC = GameObject.FindGameObjectsWithTag("AI");
+        closestNPC = NPC[0];
     }
 
     public bool IsTriggering(string TagName)
@@ -46,11 +54,16 @@ public class PlayerCharacterController : MovementComponent
     // Update is called once per frame
     void Update()
     {
-        Rigidbody2D RB = GetComponent<Rigidbody2D>();
-        if (RB)
+        foreach (GameObject npc in NPC)
         {
-            //Debug.Log(RB.transform.position);
+            if (Vector3.Distance(npc.transform.position, transform.position) < Vector3.Distance(closestNPC.transform.position, transform.position))
+            {
+                closestNPC = npc;
+            }
         }
+
+        bool IsAtKillingDistance = Vector3.Distance(closestNPC.transform.position, transform.position) < killDistance && !IsTriggering("AI");
+
         float IsMoving = 0.0f;
         if( Input.GetKey( KeyCode.RightArrow) )
         {
@@ -61,34 +74,39 @@ public class PlayerCharacterController : MovementComponent
             IsMoving = -1.0f;
         }
 
+        // ContextualUI
+        if (IsTriggering("Corpse"))
+        {
+            ContextualUI.IsEnabled = true;
+            image.sprite = reviveSprite;
+        }
+        else if(IsAtKillingDistance)
+        {
+            ContextualUI.IsEnabled = true;
+            image.sprite = killingSprite;
+        }
+        else
+        {
+            // Default Behavior
+            ContextualUI.IsEnabled = IsTriggering("ContextualUI");
+            image.sprite = hidingSprite;
+        }
+
+        // Actions
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (IsTriggering("ContextualUI"))
+            if (IsTriggering("Corpse"))
             {
-                ToggleHide();
+                GetComponent<ReviveComponent>().Revive();
+            }
+            else if (IsAtKillingDistance)
+            {
+                // Kill Someone
             }
             else
             {
                 ToggleMask();
             }
-        }
-
-        if (IsTriggering("Corpse"))
-        {
-            ContextualUI.IsEnabled = true;
-            Image image = ContextualUI.GetComponentInChildren<Image>();
-            image.sprite = reviveSprite;
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                GetComponent<ReviveComponent>().Revive();
-            }
-        }
-
-        else
-        {
-            ContextualUI.IsEnabled = IsTriggering("ContextualUI");
-            Image image = ContextualUI.GetComponentInChildren<Image>();
-            image.sprite = hidingSprite;
         }
 
         Move(IsMoving);
@@ -107,7 +125,8 @@ public class PlayerCharacterController : MovementComponent
         {
             ResetHide();
         }
-        else if(ContextualUIObject)
+
+        else if (ContextualUIObject)
         {
             IsSpottable = false;
             SpriteRenderer CollidingObjSprite = ContextualUIObject.GetComponent<SpriteRenderer>();
@@ -115,14 +134,15 @@ public class PlayerCharacterController : MovementComponent
             {
                 SpriteRender.sortingOrder = CollidingObjSprite.sortingOrder - 1;
                 transform.position = new Vector3(transform.position.x, transform.position.y, ContextualUIObject.transform.position.z - 0.1f);
+
             }
         }
+
         else
         {
-            Debug.LogWarning("No Contextual Object!");
+            Debug.LogWarning("No Contextual Object");
         }
     }
-
 
     void ToggleMask()
     {
