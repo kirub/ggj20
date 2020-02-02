@@ -103,7 +103,6 @@ GameObject:
   - component: {fileID: 1809760278253368704}
   - component: {fileID: 1809760278253368706}
   - component: {fileID: 1809760278253368707}
-  - component: {fileID: 1809760278253368733}
   m_Layer: 0
   m_Name: Mr. Clerk
   m_TagString: AnimatedCharacter
@@ -195,13 +194,13 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1809760278253368733
+--- !u!114 &7045998354709950101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809760278253368705}
+  m_GameObject: {fileID: 4648464293638058296}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d5217e0fcb8fff4c903a13b82d83646, type: 3}
@@ -362,6 +361,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc9b155f2723ab4099a67b25b04fea2, type: 3}
+--- !u!1 &4648464293638058296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3632701571077153029, guid: adc9b155f2723ab4099a67b25b04fea2,
+    type: 3}
+  m_PrefabInstance: {fileID: 8280812882928373821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3994148887345738410 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5009491738191930007, guid: adc9b155f2723ab4099a67b25b04fea2,

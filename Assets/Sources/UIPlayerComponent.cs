@@ -5,21 +5,22 @@ using UnityEngine.UI;
 
 public class UIPlayerComponent : MonoBehaviour
 {
-    public GameObject UIElement;
+    private Image UIElement;
 
     public bool IsEnabled { get; set; } = false;
     // Start is called before the first frame update
     void Start()
     {
-        UIElement.GetComponent<Image>().enabled = IsEnabled; 
+        UIElement = GetComponentInChildren<Image>();
+        UIElement.enabled = IsEnabled; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(UIElement.GetComponent<Image>().enabled != IsEnabled)
+        if(UIElement.enabled != IsEnabled)
         {
-            UIElement.GetComponent<Image>().enabled = IsEnabled;
+            UIElement.enabled = IsEnabled;
         }
     }
 }
