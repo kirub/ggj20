@@ -1,7 +1,31 @@
 fileFormatVersion: 2
-guid: 7dc870aa68cf5c1409ab3cbb330974bb
+guid: 8d60b636175d8564898f7b8d33fe8c54
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2754729984067870007
+    second: Soul animation_0
+  - first:
+      213: -3965413436763730934
+    second: Soul animation_1
+  - first:
+      213: -5679375091956862637
+    second: Soul animation_2
+  - first:
+      213: 5559604534002803242
+    second: Soul animation_3
+  - first:
+      213: 6378814356805831401
+    second: Soul animation_0
+  - first:
+      213: -3148832210442952880
+    second: Soul animation_1
+  - first:
+      213: 8167348718779765221
+    second: Soul animation_2
+  - first:
+      213: -6565924423285055704
+    second: Soul animation_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -120,11 +144,95 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Soul animation_0
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 173
+        width: 120
+        height: 173
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eac2917cd9168850800000000000000
+      internalID: 6378814356805831401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soul animation_1
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 246
+        width: 129
+        height: 199
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f5d3fa9c91d44d0800000000000000
+      internalID: -3148832210442952880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soul animation_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 43
+        width: 64
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e11c932360485170800000000000000
+      internalID: 8167348718779765221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Soul animation_3
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 101
+        width: 95
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f5808568621e4a0800000000000000
+      internalID: -6565924423285055704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bd91221d12a863f4b9d308460279160e
     internalID: 0
     vertices: []
     indices: 
