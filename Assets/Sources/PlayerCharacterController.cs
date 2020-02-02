@@ -103,6 +103,10 @@ public class PlayerCharacterController : MovementComponent
             {
                 // Kill Someone
             }
+            else if(IsTriggering("ContextualUI") )
+            {
+                ToggleHide();
+            }
             else
             {
                 ToggleMask();
