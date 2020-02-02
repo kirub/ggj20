@@ -1,13 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AiComponent : MovementComponent
 {
     private static Vector3 InvalidTarget = new Vector3(-997, -998, -999);
     public List<Vector3> WanderingTargets = new List<Vector3>();
     public float DistanceThreshold = 1.0f;
-    public float WaitingOnSpotIntervalInSeconds = 5.0f; 
+    public float WaitingOnSpotIntervalInSeconds = 5.0f;
+
+    public class OnPlayerSpottedEvent : UnityEvent { }
+    public OnPlayerSpottedEvent PlayerSpottedtEvent { get; } = new OnPlayerSpottedEvent();
+
+    public class OnPlayerCaughtEvent : UnityEvent { }
+    public OnPlayerCaughtEvent PlayerCaughtEvent { get; } = new OnPlayerCaughtEvent();
 
     private List<Vector3>.Enumerator Target;
     private Vector3 CurrentTarget = InvalidTarget;
@@ -16,6 +23,8 @@ public class AiComponent : MovementComponent
     private float CooldownOnSpot = 0.0f;
     private bool PlayerSpotted = false;
     private UIPlayerComponent ContextualUI = null;
+
+    private float DistanceOffsetFromPlayer = 1.5f;
 
     private void Awake()
     {
@@ -68,8 +77,14 @@ public class AiComponent : MovementComponent
 
     void WhenPlayerSpotted()
     {
+        Debug.Log("Player Spotted!");
+        PlayerSpottedtEvent.Invoke();
+
         NextTarget = CurrentTarget;
         CurrentTarget = PlayerCharacterController.Player.transform.position;
+        Vector3 AIToPlayer = (CurrentTarget - NextTarget);
+        AIToPlayer.Normalize();
+        CurrentTarget = CurrentTarget - AIToPlayer * Vector3.Dot(new Vector3(DistanceOffsetFromPlayer, 0.0f, 0.0f), -AIToPlayer);
     }
 
     // Update is called once per frame
@@ -90,8 +105,13 @@ public class AiComponent : MovementComponent
         else if(CurrentTarget != InvalidTarget)
         {
             Vector3 TargetPos = ValidatePositions(CurrentTarget);
-            if (Vector3.Distance(TargetPos, transform.position) < DistanceThreshold)
+            if (Vector3.Distance(TargetPos, transform.position) < DistanceThreshold )
             {
+                if(Vector3.Distance(transform.position, PlayerCharacterController.Player.transform.position) < DistanceOffsetFromPlayer * 2 )
+                {
+                    Debug.Log("Player Caught!");
+                    PlayerCaughtEvent.Invoke();
+                }
                 CurrentTarget = NextTarget;
                 if (Target.MoveNext())
                 {
