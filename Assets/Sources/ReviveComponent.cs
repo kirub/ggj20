@@ -19,6 +19,7 @@ public class ReviveComponent : MonoBehaviour
     {
         if (isReviving && !isRevived)
         {
+            Debug.Log("Now reviving. Please wait...");
             if (timer > 0)
             {
                 timer -= Time.deltaTime;
@@ -27,6 +28,7 @@ public class ReviveComponent : MonoBehaviour
             {
                 timer = -1.0f;
                 isRevived = true;
+                isReviving = false;
                 Debug.Log("Revive Successful"); // TODO: substitute with thing that happens
             }
         }
@@ -35,5 +37,6 @@ public class ReviveComponent : MonoBehaviour
     {
         // create a timer for the revive
         timer = timeToRevive;
+        isReviving = true;
     }
 }

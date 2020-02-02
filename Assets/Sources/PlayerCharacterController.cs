@@ -56,7 +56,7 @@ public class PlayerCharacterController : MovementComponent
             ToggleMask();
         }
 
-        if (IsTriggering("Revive"))
+        if (IsTriggering("Corpse"))
         {   
             // display UI for reviving
             if (Input.GetKeyDown(KeyCode.Space))
