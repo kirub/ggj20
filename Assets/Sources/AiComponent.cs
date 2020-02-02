@@ -107,7 +107,9 @@ public class AiComponent : MovementComponent
             Vector3 TargetPos = ValidatePositions(CurrentTarget);
             if (Vector3.Distance(TargetPos, transform.position) < DistanceThreshold )
             {
-                if(Vector3.Distance(transform.position, PlayerCharacterController.Player.transform.position) < DistanceOffsetFromPlayer * 2 )
+                float Direction = Vector3.Dot(TargetPos, InitialPosition - TargetPos) > 0.0f ? 1.0f : -1.0f;
+                CapAngles(Direction);
+                if (Vector3.Distance(transform.position, PlayerCharacterController.Player.transform.position) < DistanceOffsetFromPlayer * 2 )
                 {
                     Debug.Log("Player Caught!");
                     PlayerCaughtEvent.Invoke();
