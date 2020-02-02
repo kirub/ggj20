@@ -1,12 +1,60 @@
 fileFormatVersion: 2
 guid: 555c3f73b7bac0344a2d5464c2dc1733
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2786606807957302752
+    second: Mr. Clerk Grandma_0
+  - first:
+      213: -8145608997042725683
+    second: Mr. Clerk Grandma_1
+  - first:
+      213: 2492182889273111866
+    second: Mr. Clerk Grandma_2
+  - first:
+      213: 3751682380859011715
+    second: Mr. Clerk Grandma_3
+  - first:
+      213: -711129899424125077
+    second: Mr. Clerk Grandma_4
+  - first:
+      213: 7083824519567066799
+    second: Mr. Clerk Grandma_5
+  - first:
+      213: 2353005587116406648
+    second: Mr. Clerk Grandma_6
+  - first:
+      213: 6168446676680131764
+    second: Mr. Clerk Grandma_7
+  - first:
+      213: 1651320289566412185
+    second: Mr. Clerk Grandma_8
+  - first:
+      213: 978702661578881729
+    second: Mr. Clerk Grandma_9
+  - first:
+      213: 5508416373646680599
+    second: Mr. Clerk Grandma_10
+  - first:
+      213: -3682146117536860538
+    second: Mr. Clerk Grandma_11
+  - first:
+      213: -3154341058917233805
+    second: Mr. Clerk Grandma_12
+  - first:
+      213: -7618779667595520157
+    second: Mr. Clerk Grandma_13
+  - first:
+      213: -967724334202906181
+    second: Mr. Clerk Grandma_14
+  - first:
+      213: 4329726610096016594
+    second: Mr. Clerk Grandma_15
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,13 +82,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +97,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -70,13 +118,397 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 393
+        width: 216
+        height: 314
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022150b4fdbf359d0800000000000000
+      internalID: -2786606807957302752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_1
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 397
+        width: 217
+        height: 292
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccda0446cbf4fe80800000000000000
+      internalID: -8145608997042725683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_2
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 393
+        width: 207
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a353e663223069220800000000000000
+      internalID: 2492182889273111866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_3
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 393
+        width: 205
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38271358f37a01430800000000000000
+      internalID: 3751682380859011715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_4
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 393
+        width: 216
+        height: 314
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f6aabcf1f8126f0800000000000000
+      internalID: -711129899424125077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_5
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 397
+        width: 217
+        height: 292
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa64ffb6edcce4260800000000000000
+      internalID: 7083824519567066799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_6
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 393
+        width: 207
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 877359e5d1e87a020800000000000000
+      internalID: 2353005587116406648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_7
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 393
+        width: 206
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b445731299ba9550800000000000000
+      internalID: 6168446676680131764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_8
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 7
+        width: 216
+        height: 314
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d4006ed0baae610800000000000000
+      internalID: 1651320289566412185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_9
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 7
+        width: 217
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca7324a2ec059d00800000000000000
+      internalID: 978702661578881729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_10
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 10
+        width: 207
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712e72ac183d17c40800000000000000
+      internalID: 5508416373646680599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_11
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 7
+        width: 205
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686b12d6d9366ecc0800000000000000
+      internalID: -3682146117536860538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_12
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 7
+        width: 216
+        height: 314
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b0fc2f4878934d0800000000000000
+      internalID: -3154341058917233805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_13
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 7
+        width: 216
+        height: 296
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36710032248a44690800000000000000
+      internalID: -7618779667595520157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_14
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 7
+        width: 206
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9955368d3f192f0800000000000000
+      internalID: -967724334202906181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mr. Clerk Grandma_15
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 8
+        width: 205
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc44597967461c30800000000000000
+      internalID: 4329726610096016594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 86e712764daeeb248903bd30c44ba833
     internalID: 0
     vertices: []
     indices: 
