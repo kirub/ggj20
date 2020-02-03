@@ -14,6 +14,7 @@ public class PlayerCharacterController : MovementComponent
     public Sprite hidingSprite;
     public Sprite killingSprite;
 
+    private InventoryComponent Inventory = null;
     private UIPlayerComponent ContextualUI = null;
     private SpriteRenderer SpriteRender = null;
     private GameObject ContextualUIObject = null;
@@ -37,6 +38,10 @@ public class PlayerCharacterController : MovementComponent
         InitialSortingOrder = SpriteRender.sortingOrder;
         InitialZPosition = transform.position.z;
         image = ContextualUI.GetComponentInChildren<Image>();
+        Inventory = GetComponent<InventoryComponent>();
+        Inventory.AddItem(Item.EType.Mask);
+        Inventory.AddItem(Item.EType.Newspaper);
+        Inventory.AddItem(Item.EType.Grandma);
     }
 
     // Start is called before the first frame update
@@ -93,6 +98,11 @@ public class PlayerCharacterController : MovementComponent
         }
 
         // Actions
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Inventory.NextItem();
+        }
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
             if (IsTriggering("Corpse"))
@@ -102,6 +112,7 @@ public class PlayerCharacterController : MovementComponent
             else if (IsAtKillingDistance)
             {
                 // Kill Someone
+                CharacterAnimator.SetTrigger("Kill");
             }
             else if(IsTriggering("ContextualUI") )
             {
@@ -109,7 +120,8 @@ public class PlayerCharacterController : MovementComponent
             }
             else
             {
-                ToggleMask();
+                Inventory.ToggleCurrentItem(CharacterAnimator);
+                IsSpottable = !Inventory.IsWearing;
             }
         }
 
@@ -138,7 +150,6 @@ public class PlayerCharacterController : MovementComponent
             {
                 SpriteRender.sortingOrder = CollidingObjSprite.sortingOrder - 1;
                 transform.position = new Vector3(transform.position.x, transform.position.y, ContextualUIObject.transform.position.z - 0.1f);
-
             }
         }
 
