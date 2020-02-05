@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877267373264881580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.36, y: 0, z: -3.62}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 877267373880877999}
@@ -62,8 +62,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 1, z: 10}
-  m_Center: {x: 3.2, y: 1, z: 0}
+  m_Size: {x: 3, y: 1, z: 7}
+  m_Center: {x: 5, y: 1, z: 0}
 --- !u!114 &877267373264881581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
   WanderingTargets:
   - {x: -32.27, y: 0, z: -2.61}
   - {x: -20.03, y: 0, z: -6.75}
-  DistanceThreshold: 1
   WaitingOnSpotIntervalInSeconds: 5
+  DistanceThreshold: 1
 --- !u!1 &877267373880877998
 GameObject:
   m_ObjectHideFlags: 0

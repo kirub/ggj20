@@ -29,6 +29,7 @@ public class AiComponent : MovementComponent
 
     public float DistanceThreshold = 0.5f;
     private float DistanceOffsetFromPlayer = 0.5f;
+    public bool IsDead { get; private set; } = false;
 
     private void Awake()
     {
@@ -61,6 +62,11 @@ public class AiComponent : MovementComponent
         {
             CanSeePlayer = false;
         }
+    }
+
+    public void Kill()
+    {
+        IsDead = true;
     }
 
     // Start is called before the first frame update
@@ -118,6 +124,9 @@ public class AiComponent : MovementComponent
     // Update is called once per frame
     void Update()
     {
+        if (IsDead)
+            return;
+
         if (!HasPlayerBeenCaught)
         {
             if (CanSeePlayer)

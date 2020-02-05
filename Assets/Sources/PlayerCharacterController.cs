@@ -21,8 +21,8 @@ public class PlayerCharacterController : MovementComponent
     private int InitialSortingOrder = -1;
     private float InitialZPosition = 0.0f;
     private Image image = null;
-    private GameObject closestNPC;
-    private GameObject[] NPC;
+    private AiComponent closestNPC;
+    private List<AiComponent> NPC = new List<AiComponent>();
 
     void Awake()
     {
@@ -47,7 +47,15 @@ public class PlayerCharacterController : MovementComponent
     // Start is called before the first frame update
     void Start()
     {
-        NPC = GameObject.FindGameObjectsWithTag("AI");
+        GameObject[] NPCsGO = GameObject.FindGameObjectsWithTag("AI");
+        foreach(GameObject Element in NPCsGO)
+        {
+            AiComponent Comp = Element.GetComponent<AiComponent>();
+            if (Comp)
+            {
+                NPC.Add(Comp);
+            }
+        }
         closestNPC = NPC[0];
     }
 
@@ -59,15 +67,18 @@ public class PlayerCharacterController : MovementComponent
     // Update is called once per frame
     void Update()
     {
-        foreach (GameObject npc in NPC)
+        closestNPC = null;
+        foreach (AiComponent npc in NPC)
         {
-            if (Vector3.Distance(npc.transform.position, transform.position) < Vector3.Distance(closestNPC.transform.position, transform.position))
+            if (npc.IsDead)
+                continue;
+            if (!closestNPC || Vector3.Distance(npc.transform.position, transform.position) < Vector3.Distance(closestNPC.transform.position, transform.position))
             {
                 closestNPC = npc;
             }
         }
 
-        bool IsAtKillingDistance = Vector3.Distance(closestNPC.transform.position, transform.position) < killDistance && !IsTriggering("AI");
+        bool IsAtKillingDistance = closestNPC && Vector3.Distance(closestNPC.transform.position, transform.position) < killDistance && !IsTriggering("AI");
 
         float IsMoving = 0.0f;
         if( Input.GetKey( KeyCode.RightArrow) )
@@ -109,10 +120,25 @@ public class PlayerCharacterController : MovementComponent
             {
                 GetComponent<ReviveComponent>().Revive();
             }
-            else if (IsAtKillingDistance)
+            else if (IsAtKillingDistance && closestNPC)
             {
                 // Kill Someone
                 CharacterAnimator.SetTrigger("Kill");
+
+                Animator NPCAnimator = closestNPC.GetComponentInChildren<Animator>();
+                if( NPCAnimator )
+                {
+                    NPCAnimator.SetTrigger("Kill");
+                }
+
+                AiComponent Component = closestNPC.GetComponent<AiComponent>();
+                if(Component)
+                {
+                    Component.Kill();
+                }
+
+                // Update HUD
+                ScreenUIComponent.HUD.SoulGauge.DecreaseSoulsCount();
             }
             else if(IsTriggering("ContextualUI") )
             {

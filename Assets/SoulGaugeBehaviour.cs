@@ -31,6 +31,11 @@ public class SoulGaugeBehaviour : MonoBehaviour
         UISoulAnims[Idx].SetBool("IsActive", false);
     }
 
+    public void DecreaseSoulsCount()
+    {
+        SetSoulsCount(CurrentSoulValue - 1);
+    }
+
     public void SetSoulsCount(int SoulValue)
     {
         SoulValue = Mathf.Clamp(SoulValue, 1, 3 );
